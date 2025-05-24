@@ -66,25 +66,25 @@ export const verification = pgTable("verification", {
   updatedAt: timestamp("updated_at"),
 });
 
-// export const categories = pgTable("categories", {
-//   id: serial("id").primaryKey(),
-//   name: varchar("name", { length: 40 }).notNull(),
-//   description: varchar("description", { length: 140 }),
-//   isIncome: boolean("is_income").default(false).notNull(),
-//   excludeFromBudget: boolean("exclude_from_budget").default(false).notNull(),
-//   excludeFromTotals: boolean("exclude_from_totals").default(false).notNull(),
-//   archived: boolean("archived").default(false).notNull(),
-//   archivedOn: timestamp("archived_on"),
-//   updatedAt: timestamp("updated_at"),
-//   createdAt: timestamp("created_at"),
-//   isGroup: boolean("is_group").default(false).notNull(),
-//   groupId: integer("group_id"),
-//   order: integer("order").default(0).notNull(),
-//   groupCategoryName: varchar("group_category_name", { length: 100 }),
-//   userId: text("user_id")
-//     .notNull()
-//     .references(() => user.id, { onDelete: "cascade" }),
-// });
+export const categories = pgTable("categories", {
+  id: serial("id").primaryKey(),
+  name: varchar("name", { length: 40 }).notNull(),
+  description: varchar("description", { length: 140 }),
+  isIncome: boolean("is_income").default(false).notNull(),
+  excludeFromBudget: boolean("exclude_from_budget").default(false).notNull(),
+  excludeFromTotals: boolean("exclude_from_totals").default(false).notNull(),
+  archived: boolean("archived").default(false).notNull(),
+  archivedOn: timestamp("archived_on"),
+  updatedAt: timestamp("updated_at"),
+  createdAt: timestamp("created_at"),
+  isGroup: boolean("is_group").default(false).notNull(),
+  groupId: integer("group_id"),
+  order: integer("order").default(0).notNull(),
+  groupCategoryName: varchar("group_category_name", { length: 100 }),
+  userId: text("user_id")
+    .notNull()
+    .references(() => user.id, { onDelete: "cascade" }),
+});
 
 // export const insertCategorySchema = createInsertSchema(categories).omit({
 //   id: true,

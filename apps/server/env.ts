@@ -12,6 +12,10 @@ export const env = createEnv({
       process.env.NODE_ENV === "production"
         ? z.string().min(1)
         : z.string().min(1).optional().default("http://localhost:3000"),
+    BETTER_AUTH_URL:
+      process.env.NODE_ENV === "production"
+        ? z.string().min(1)
+        : z.string().min(1).optional().default("http://localhost:4000"),
     // VITE_SERVER_URL: z.string().min(1),
     PORT: z.coerce.number().default(4000),
     RESEND_API_KEY: z.string().min(1),
@@ -21,6 +25,7 @@ export const env = createEnv({
     DATABASE_URL: process.env.DATABASE_URL,
     BETTER_AUTH_SECRET: process.env.BETTER_AUTH_SECRET,
     WEB_URL: process.env.WEB_URL,
+    BETTER_AUTH_URL: process.env.BETTER_AUTH_URL,
     // VITE_SERVER_URL: process.env.VITE_SERVER_URL,
     PORT: process.env.PORT,
     RESEND_API_KEY: process.env.RESEND_API_KEY,

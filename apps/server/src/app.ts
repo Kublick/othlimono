@@ -3,6 +3,7 @@ import { cors } from "hono/cors";
 
 import { auth, type HonoAppContext } from "./auth";
 import { env } from "../env";
+import { categoriesRouter } from "./routes/categories";
 
 const app = new Hono<HonoAppContext>()
   .get("/health", (c) => {
@@ -38,7 +39,8 @@ const app = new Hono<HonoAppContext>()
   })
   .on(["POST", "GET"], "/api/auth/*", (c) => {
     return auth.handler(c.req.raw);
-  });
+  })
+  .route("/api/categories", categoriesRouter);
 
 export default app;
 

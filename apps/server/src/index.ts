@@ -8,6 +8,6 @@ serve(
     port: env.PORT || 4000,
   },
   (info) => {
-    console.log(`Server is running on http://localhost:${info.port}`);
+    console.log(`Server is running on ${env.WEB_URL}`);
   }
 );
