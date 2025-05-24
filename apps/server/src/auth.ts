@@ -1,10 +1,10 @@
 import { Resend } from "resend";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { db } from "./db/drizzle.js";
-import * as schema from "./db/schema.js";
+import { db } from "./db/drizzle";
+import * as schema from "./db/schema";
 import { config } from "dotenv";
-import { env } from "../env.js";
+import { env } from "../env";
 
 config();
 

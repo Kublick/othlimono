@@ -2,8 +2,8 @@
   "name": "@workspace/server",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc",
+    "dev": "tsx watch src/",
+    "build": "tsup",
     "start": "node dist/src/index.js",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
@@ -27,6 +27,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "resend": "^4.5.1",
+    "tsup": "^8.5.0",
     "zod": "^3.25.28"
   },
   "devDependencies": {
