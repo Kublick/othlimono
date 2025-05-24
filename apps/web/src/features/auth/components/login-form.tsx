@@ -119,10 +119,7 @@ const LoginForm = () => {
             type="button"
             variant="outline"
             className="w-full"
-            onClick={() => {
-              console.log("Google login clicked");
-              // handleGoogleLogin
-            }}
+            onClick={handleGoogleLogin}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
