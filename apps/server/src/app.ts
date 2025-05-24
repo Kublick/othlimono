@@ -1,8 +1,8 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 
-import { auth, type HonoAppContext } from "./auth";
-import { env } from "../env";
+import { auth, type HonoAppContext } from "./auth.js";
+import { env } from "../env.js";
 
 const app = new Hono<HonoAppContext>()
   .get("/health", (c) => {
