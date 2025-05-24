@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "strict": true,
+    "module": "Preserve",
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "outDir": "./dist",
+    "moduleResolution": "bundler"
+  },
+  "exclude": ["node_modules"]
+}
