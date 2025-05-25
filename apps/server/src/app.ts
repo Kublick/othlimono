@@ -7,11 +7,14 @@ import { categoriesRouter } from "./routes/categories";
 
 const app = new Hono<HonoAppContext>()
   .get("/health", (c) => {
-    return c.json({
-      status: "ok",
-      uptime: process.uptime(),
-      memoryUsage: process.memoryUsage(),
-    });
+    return c.json(
+      {
+        status: "ok",
+        uptime: process.uptime(),
+        memoryUsage: process.memoryUsage(),
+      },
+      200
+    );
   })
   .use(
     "*",

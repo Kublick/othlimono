@@ -7,10 +7,8 @@ import {
   varchar,
   pgEnum,
   integer,
-  numeric,
-  jsonb,
 } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
+// import { createInsertSchema } from "drizzle-zod";
 
 export const userRoleEnum = pgEnum("user_role", ["user", "assistant", "admin"]);
 

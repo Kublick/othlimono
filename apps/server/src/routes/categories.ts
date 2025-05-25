@@ -1,7 +1,7 @@
 import { Hono } from "hono";
-import { HonoAppContext } from "../auth";
-import { db } from "@/db/drizzle";
-import { categories } from "@/db/schema";
+import { type HonoAppContext } from "../auth";
+import { db } from "../db/drizzle";
+import { categories } from "../db/schema";
 import { asc, eq } from "drizzle-orm";
 
 export const categoriesRouter = new Hono<HonoAppContext>().get(

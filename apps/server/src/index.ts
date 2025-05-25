@@ -8,6 +8,6 @@ serve(
     port: env.PORT || 4000,
   },
   (info) => {
-    console.log(`Server is running on ${env.WEB_URL}`);
+    console.log(`Server is running on ${env.BETTER_AUTH_URL}`);
   }
 );

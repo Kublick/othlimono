@@ -15,7 +15,6 @@
     "@tanstack/react-router": "^1.114.3",
     "@tanstack/react-router-devtools": "^1.114.3",
     "@tanstack/router-plugin": "^1.114.3",
-    "@workspace/server": "workspace:*",
     "@workspace/ui": "workspace:*",
     "better-auth": "^1.2.8",
     "class-variance-authority": "^0.7.1",
