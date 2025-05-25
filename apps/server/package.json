@@ -1,6 +1,7 @@
 {
   "name": "@workspace/server",
   "type": "module",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "tsx watch src/",
     "build": "tsup",
